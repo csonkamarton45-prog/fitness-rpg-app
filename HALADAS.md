@@ -7,13 +7,12 @@
 
 Részletek: lásd a `00_koncepcio_v4.md`, `03_mvp_backlog.md`, `07_validacio_es_utemezes.md` és `08_fejlesztesi_munkafolyamat.md` dokumentumokat.
 
-## Aktuális munkamenet – 1. fázis, 1. lépés
+### Aktuális munkamenet – 1. fázis, 3. lépés
 
-### Aktuális munkamenet – 1. fázis, 2. lépés
-
-Cél: statikus próbahét-oldal létrehozása (0–7. nap), ahol a felhasználó látja,
-hogy milyen mintaedzések várnak rá osztályonként, és hogyan épül fel a próbahét
-folyamata. Az oldal egyelőre csak vizuális prototípus, backend-logika nélkül.
+Cél: önálló stat-nézet ("/stats" oldal) létrehozása, ahol az öt fő stat
+(Erő, Állóképesség, Fürgeség, Regeneráció, Fegyelem) relatív sávként jelenik
+meg, és szövegesen elmagyarázzuk az "alvó stat" koncepciót. Az oldal egyelőre
+statikus, Supabase/backend integráció nélkül.
 
 ### Mi készült el ebben a lépésben
 
