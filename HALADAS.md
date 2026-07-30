@@ -1,29 +1,28 @@
-# HALADAS – Fitness RPG app
+# HALADAS – RPG Fitness App
 
-## 0. fázis – Alapok
+## Fázisok áttekintése
 
-Állapot: LEZÁRVA (2026-07-30)
+- 0. fázis – Alapok: Node.js, git, GitHub, Vercel, Supabase beállítva; Next.js projekt létrehozva. (Finomítsd a saját valós állapotodra.)
+- 1. fázis – Karakteralkotás és statrendszer: próbahét-folyamat, osztály/felszerelés-profil/hozzáférhetőségi profil, alap stat-megjelenítés, kattintható prototípusban. 
 
-Mit készült el:
-- Lokális fejlesztői környezet beállítva (Node.js + npm), a Next.js alapváz fut `localhost:3000`-on.
-- GitHub repo létrehozva (`fitness-rpg-app`), Vercel projekttel összekötve, az alap build sikeresen deployolódik.
-- Supabase projekt létrehozva (EU régió), az adatbázis elérhető.
-- Supabase séma v0.1 létrehozva a 02_adatmodel.md entitásai alapján (users, character_profiles, stat_states, stat_history, workout_logs stb.).
+Részletek: lásd a `00_koncepcio_v4.md`, `03_mvp_backlog.md`, `07_validacio_es_utemezes.md` és `08_fejlesztesi_munkafolyamat.md` dokumentumokat.
 
-Döntések:
-- A Companion és guild/party táblák modellje a 02-es dokumentum szerint marad, de a tényleges implementációjuk a post-MVP fázisokra tolódik.
-- Az MVP-ben a fő fókusz az edzés → XP → stat → küldetés fő hurok és a próbahét folyamat, a világtérkép és loot-rendszer csak minimális, de már determinisztikus formában jelenik meg.
+## Aktuális munkamenet – 1. fázis, 1. lépés
 
-Következő fázis:
-- 1. fázis – Karakteralkotás és statrendszer.
+### Cél
 
-Következő konkrét lépések:
-- Onboarding/proóbahét UI első verziója: karakterosztály, equipment profil, hozzáférhetőségi profil kiválasztása.
-- StatState alapértelmezett értékek bekötése a Supabase-ből, és a statok megjelenítése a felhasználói felületen.
-- Alap edge function / API réteg megtervezése a statok későbbi frissítéséhez (XP-számítás előtt egy statikusan beállított demo-értékekkel).
+Statikus, kattintható onboarding/karakteralkotás oldal létrehozása Next.js-ben, amely:
 
-## Parkoló lista (ötletek későbbre)
+- bemutatja a próbahét koncepcióját,
+- lehetővé teszi osztály, felszerelés-profil és hozzáférhetőségi profil választását egyenrangú, azonos vizuális súllyal,
+- megjeleníti az öt fő statot (Erő, Állóképesség, Fürgeség, Regeneráció, Fegyelem) egy egyszerű sávos komponenssel.
 
-- Companion evolúció vizuális megjelenítése (v1.1+).
-- Guild/party rendszer, buddy pair és közös küldetések.
-- Wearable / web push integráció az aktivitás finomabb követéséhez.
+### Mi készült el ebben a lépésben
+
+- Létrejött az onboarding oldal (Next.js route) a karakteralkotás 3 tengelyével.
+- Készült egy alap stat-sáv blokk, ami vizuálisan jeleníti meg az öt statot.
+- A fenti elemek egyelőre statikus adatokkal dolgoznak, Supabase/backend integráció nélkül.
+
+### Következő lépés
+
+- 1. fázis, 2. lépés: a próbahét konkrét mintaedzéseinek statikus felvitele és kattintható próbahét-flow (pl. napi „card” jellegű mintaedzések) kialakítása.
