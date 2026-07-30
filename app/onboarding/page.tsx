@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
 type ClassKey = "harcos" | "vadasz" | "szerzetes" | "ranger";
 type GearKey = "testsuly_vadon" | "otthon" | "gym";
@@ -68,6 +69,8 @@ const ACCESSIBILITY: {
 const STAT_KEYS = ["Erő", "Állóképesség", "Fürgeség", "Regeneráció", "Fegyelem"];
 
 export default function OnboardingPage() {
+  const router = useRouter();
+
   const [selectedClass, setSelectedClass] = useState<ClassKey | null>(null);
   const [selectedGear, setSelectedGear] = useState<GearKey | null>(null);
   const [selectedAccessibility, setSelectedAccessibility] =
@@ -77,6 +80,12 @@ export default function OnboardingPage() {
     selectedClass !== null &&
     selectedGear !== null &&
     selectedAccessibility !== null;
+
+  const handleContinue = () => {
+    if (!isReady) return;
+    // A későbbi fázisokban itt majd elmentjük a választásokat Supabase-be.
+    router.push("/trial-week");
+  };
 
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100">
@@ -204,6 +213,7 @@ export default function OnboardingPage() {
           <button
             type="button"
             disabled={!isReady}
+            onClick={handleContinue}
             className={`px-4 py-2 rounded-md text-sm font-medium transition ${
               isReady
                 ? "bg-emerald-500 text-slate-950 hover:bg-emerald-400"

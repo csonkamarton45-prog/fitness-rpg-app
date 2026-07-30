@@ -9,13 +9,11 @@ Részletek: lásd a `00_koncepcio_v4.md`, `03_mvp_backlog.md`, `07_validacio_es_
 
 ## Aktuális munkamenet – 1. fázis, 1. lépés
 
-### Cél
+### Aktuális munkamenet – 1. fázis, 2. lépés
 
-Statikus, kattintható onboarding/karakteralkotás oldal létrehozása Next.js-ben, amely:
-
-- bemutatja a próbahét koncepcióját,
-- lehetővé teszi osztály, felszerelés-profil és hozzáférhetőségi profil választását egyenrangú, azonos vizuális súllyal,
-- megjeleníti az öt fő statot (Erő, Állóképesség, Fürgeség, Regeneráció, Fegyelem) egy egyszerű sávos komponenssel.
+Cél: statikus próbahét-oldal létrehozása (0–7. nap), ahol a felhasználó látja,
+hogy milyen mintaedzések várnak rá osztályonként, és hogyan épül fel a próbahét
+folyamata. Az oldal egyelőre csak vizuális prototípus, backend-logika nélkül.
 
 ### Mi készült el ebben a lépésben
 
